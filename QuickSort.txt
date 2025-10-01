@@ -1,0 +1,27 @@
+Proc QuickSort(A, low, high)
+    if low ≤ high then
+        return A
+    p <- Partition(A, low, high)
+    QuickSort(A, low, p-1)
+    QuickSort(A, p+1, high)
+    return A
+
+Proc Partition(A, low, high)
+    p <- ChoosePivot(A, low, high)
+    A[high], A[p] <- A[p], A[high]
+    pivot <- A[high]
+    left <- low
+    right <- high - 1
+
+    while left ≤ right do
+        while left ≤ right and A[left] ≤ pivot do
+            left <- left + 1
+        
+        while right ≥ left and A[right] ≥ pivot do
+            right <- right - 1
+
+        if left < right then
+            A[left], A[right] <- A[right], A[left]
+    
+    A[left], A[high] <- A[high], A[left]
+    return left
