@@ -1,4 +1,4 @@
-from QuickSort.Python.QuickSort import QuickSort
+from QuickSort import QuickSort
 
 qs = QuickSort()
 unsorted_list = [3, 2, 8, 1, 4, 5, 7, 6, 10, 9]
