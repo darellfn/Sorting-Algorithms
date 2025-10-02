@@ -1,0 +1,23 @@
+Proc HeapSort(A)
+    BuildMaxHeap(A, n)
+    for i <- n-1 down to 0 do
+        A[n], A[0] <- A[0], A[n]
+        BubbleDown(A, 0, n)
+    return A
+
+Proc BuildMaxHeap(A, n)
+    for i <- ⌊n/2⌋ down to 0 do
+        BubbleDown(A, i, n)
+
+Proc BubbleDown(A, i, n)
+    largest <- i
+    left <- 2i + 1
+    right <- 21 + 2
+
+    if left < n and A[left] > A[largest] then
+        largest <- left
+    if right < n and A[right] > A[largest] then
+        largest <- right
+    if i ≠ largest then
+        A[i], A[largest] <- A[largest], A[i]
+        BubbleDown(A, largest, n)

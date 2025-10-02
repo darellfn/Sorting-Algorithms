@@ -5,6 +5,6 @@ public class Main {
     public static void main(String[] args) { 
         QuickSort qs = new QuickSort();
         int[] unsortedArray = new int[] {3, 2, 8, 1, 4, 5, 7, 6, 10, 9};
-        System.out.println("Java: " + Arrays.toString(qs.quickSort(unsortedArray, 0, unsortedArray.length - 1)));
+        System.out.println("Quick Sort (Java): " + Arrays.toString(qs.quickSort(unsortedArray, 0, unsortedArray.length - 1)));
     }
 }

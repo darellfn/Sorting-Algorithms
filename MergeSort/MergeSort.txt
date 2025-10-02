@@ -1,0 +1,29 @@
+Proc MergeSort(A)
+    if n ≤ 1 then
+        return A
+    i <- ⌊n/2⌋
+    A1 <- MergeSort(A[0..i-1])
+    A2 <- MergeSort(A[i..n-1])
+    return Merge(A1, A2, A)
+
+Proc Merge(A1, A2, A)
+    i <- 0
+    j <- 0
+
+    while i < |A1| and j < |A2| do
+        if A1[i] ≤ A2[j] then
+            A[i+j] = A1[i]
+            i <- i + 1
+        else
+            A[i+j] = A2[j]
+            j <- j + 1
+
+    while i < |A1| do
+        A[i+j] = A1[i]
+        i <- i + 1
+
+    while j < |A2| do
+        A[i+j] = A2[j]
+        j <- j + 1
+
+    return A
