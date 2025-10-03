@@ -1,0 +1,8 @@
+Proc SelectionSort(A)
+    for i <- 0 to n - 1 do
+        k <- i
+        for j <- i + 1 to n - 1 do
+            if A[j] < A[k] then
+                k <- j
+        if i ≠ k then
+            A[i], A[k] <- A[k], A[i]

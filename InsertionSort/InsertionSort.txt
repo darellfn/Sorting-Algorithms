@@ -1,0 +1,6 @@
+Proc InsertionSort(A)
+    for i <- 1 to n - 1 do
+        j <- i
+        while j > 0 and A[j-1] > A[j] do
+            A[j], A[j-1] <- A[j-1], A[j]
+            j <- j - 1
