@@ -1,8 +1,8 @@
 Proc HeapSort(A)
     BuildMaxHeap(A, n)
     for i <- n-1 down to 0 do
-        A[n], A[0] <- A[0], A[n]
-        BubbleDown(A, 0, n)
+        A[i], A[0] <- A[0], A[i]
+        BubbleDown(A, 0, i)
     return A
 
 Proc BuildMaxHeap(A, n)

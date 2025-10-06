@@ -1,4 +1,4 @@
-class QuickSort:
+class Quick_Sort:
     
     def quick_sort(self, A, low, high):
         if low >= high:
@@ -9,7 +9,7 @@ class QuickSort:
         return A
         
     def partition(self, A, low, high):
-        p = self.choosePivot(A, low, high)
+        p = self.choose_pivot(A, low, high)
         tempHigh = A[high]
         A[high] = A[p]
         A[p] = tempHigh
@@ -33,7 +33,7 @@ class QuickSort:
 
         return left
     
-    def choosePivot(self, A, low, high):
+    def choose_pivot(self, A, low, high):
         m = len(A)//2
 
         if A[low] <= A[m] and A[high] >= A[m] or A[low] >= A[m] and A[high] <= A[m]:
